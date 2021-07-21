@@ -1,18 +1,22 @@
-node() {
-
-  stage('prepare') {
-
-      checkout scm
-
-      setupCommonPipelineEnvironment script:this
-       }
- stage('build') {
-      mtaBuild script: this
-  }
-  stage('neoDeploy') {
-       neoDeploy script: this
-  }
- 
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                // 
+            }
+        }
+        stage('Test') { 
+            steps {
+                // 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                // 
+            }
+        }
+    }
 }
 
 
